@@ -9,10 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prod": "ng build --prod",
-    "preview":"live-server ./preview ",
-    "ele:build:es5": "ng build ng-custom-elements --prod --output-hashing=none && cat dist/ng-custom-elements/runtime-es5.js dist/ng-custom-elements/polyfills-es5.js dist/ng-custom-elements/scripts.js dist/ng-custom-elements/main-es5.js > preview/ng-custom-elements-app-es5.js && cat dist/ng-custom-elements/runtime-es2015.js dist/ng-custom-elements/polyfills-es2015.js dist/ng-custom-elements/scripts.js dist/ng-custom-elements/main-es2015.js > preview/ng-custom-elements-app-es2015.js",
+    "preview": "live-server ./preview ",
+    "ele:build:es5": "ng build ng-custom-elements --base-href /hwservice/ --prod --output-hashing=none && cat dist/ng-custom-elements/runtime-es5.js dist/ng-custom-elements/polyfills-es5.js dist/ng-custom-elements/scripts.js dist/ng-custom-elements/main-es5.js > preview/ng-custom-elements-app-es5.js && cat dist/ng-custom-elements/runtime-es2015.js dist/ng-custom-elements/polyfills-es2015.js dist/ng-custom-elements/scripts.js dist/ng-custom-elements/main-es2015.js > preview/ng-custom-elements-app-es2015.js",
     "ele:build:es2015": "ng build ng-custom-elements --prod --output-hashing=none && cat dist/ng-custom-elements/runtime-es2015.js dist/ng-custom-elements/polyfills-es2015.js dist/ng-custom-elements/scripts.js dist/ng-custom-elements/main-es2015.js > preview/ng-custom-elements-app-es2015.js"
-
   },
   "private": true,
   "dependencies": {
@@ -40,6 +39,7 @@
     "@types/node": "~8.9.4",
     "@webcomponents/webcomponentsjs": "^2.4.2",
     "codelyzer": "^5.0.0",
+    "http-server": "^0.12.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
